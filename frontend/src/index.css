@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+    --font-muli: "muli", sans-serif;;
+    --breakpoint-xs: 475px;
+    --breakpoint-xxs: 300px;
+    --breakpoint-cstm: 350px;
+    --breakpoint-cstmv: 313px;
+    --breakpoint-cstmvv:524px;
+    --breakpoint-cstmvvv:390px;
+    --breakpoint-formcstm:450px;
+    --breakpoint-filters:420px;
+}

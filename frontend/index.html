@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/logoNoBg.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--app-head-->
+
+  <link rel="icon" href="https://zoomvintageclassics.com/assets/logoNoBg-ClutNe1u.png">
+  <link rel="stylesheet" href="https://use.typekit.net/hol2cam.css">
+</head>
+
+<body style="background-color: hsl(var(--body-color));">
+  <div id="loading-overlay" style="
+      position: fixed;
+      inset: 0;
+      background: #111204;
+      z-index: 9999;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    "></div>
+
+  <main id="root"><!--app-html--></main>
+
+  <script type="module" src="/src/entry-client.jsx"></script>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        const overlay = document.getElementById('loading-overlay');
+        if (overlay) {
+          overlay.style.opacity = '0';
+          overlay.addEventListener('transitionend', () => overlay.remove());
+        }
+      }, 200);
+    });
+  </script>
+</body>
+
+</html>
