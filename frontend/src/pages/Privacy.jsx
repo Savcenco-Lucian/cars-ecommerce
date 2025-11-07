@@ -22,7 +22,7 @@ const Privacy = () => {
 
             <section className="pt-[70px] sm:pt-[90px] pb-[100px] sm:container sm:mx-auto px-[10px] font-muli lg:grid lg:grid-cols-3 lg:grid-rows-1 gap-[50px]">
                 <div className="flex flex-col gap-[50px] lg:col-span-2">
-                    <p className='text-[20px] text-gray-500 font-[600]'>Zoom Vintage Classics ("we," "our," or "us") is dedicated to safeguarding your personal data and values your privacy. When you visit our website, <a href="https://zoomvintageclassics.com" className='!text-black'>https://zoomvintageclassics.com</a>, we gather, use, disclose, and protect your information as described in this Privacy Policy, along with any associated services or features. <u>You accept the terms of this Privacy Policy by using our website.</u></p>
+                    <p className='text-[20px] text-gray-500 font-[600]'>Zoom Vintage Classics ("we," "our," or "us") is dedicated to safeguarding your personal data and values your privacy. When you visit our website, <a href="https://zoom-vintageclassics.com" className='!text-black'>https://zoom-vintageclassics.com</a>, we gather, use, disclose, and protect your information as described in this Privacy Policy, along with any associated services or features. <u>You accept the terms of this Privacy Policy by using our website.</u></p>
 
                     <div className="flex flex-col gap-[25px] text-gray-500">
                         <p className='text-[24px]'>1. Information We Collect</p>
