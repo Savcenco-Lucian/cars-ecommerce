@@ -190,7 +190,7 @@ const ListingDetails = () => {
 
     const title = listing ? `${listing.title} | Zoom Vintage Classics` : 'For Sale | Zoom Vintage Classics';
     const description = listing ? listing.title : 'Find your ideal dream car. Zoom Vintage Classics offers the best collection of classic muscle cars!';
-    const image = listing && listing.listing_images.length > 0 ? listing.listing_images[0].path : 'https://zoomvintageclassics.com/assets/logoNoBg-ClutNe1u.png';
+    const image = listing && listing.listing_images.length > 0 ? listing.listing_images[0].path : 'https://zoom-vintageclassics.com/assets/logoNoBg-ClutNe1u.png';
 
     return (
         <>
