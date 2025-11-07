@@ -91,7 +91,7 @@ app.use('*all', async (req, res) => {
           <meta name="description" content="${listing.description}" />
 
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://zoomvintageclassics.com/listing/${slug}" />
+          <meta property="og:url" content="https://zoom-vintageclassics.com/listing/${slug}" />
           <meta property="og:title" content="${listing.title} | Zoom Vintage Classics" />
           <meta property="og:description" content="${listing.description}" />
           <meta property="og:image" content="${listing.listing_images[0].path}" />
