@@ -19,16 +19,16 @@ SECRET_KEY = os.getenv("DJ_SECRET_KEY"),
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ["zoomvintageclassics.com", "www.zoomvintageclassics.com"]
+ALLOWED_HOSTS = ["zoom-vintageclassics.com", "www.zoom-vintageclassics.com"]
 CSRF_TRUSTED_ORIGINS = [
-    "https://zoomvintageclassics.com",
-    "https://www.zoomvintageclassics.com",
+    "https://zoom-vintageclassics.com",
+    "https://www.zoom-vintageclassics.com",
 ]
 
 CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
-    "https://zoomvintageclassics.com",
-    "https://www.zoomvintageclassics.com",
+    "https://zoom-vintageclassics.com",
+    "https://www.zoom-vintageclassics.com",
 ]
 CORS_ALLOWS_CREDENTIALS = True
 CORS_ALLOW_CREDENTIALS = True
