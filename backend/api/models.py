@@ -218,7 +218,6 @@ def listing_image_upload_to(instance: "ListingImage", filename: str) -> str:
 class ListingImage(models.Model):
     listing = models.ForeignKey(CarsListing, on_delete=models.CASCADE, related_name="images")
     path = models.ImageField(upload_to=listing_image_upload_to)
-
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -228,13 +227,17 @@ class ListingImage(models.Model):
 
     def __str__(self) -> str:
         return f"Image #{self.pk} for {self.listing}"
-    
-    def delete(self, *args, **kwargs):
-        # Delete the file from the file system
-        if self.path:
-            self.path.delete(save=False)  # Ensure the file is deleted before removing the instance
 
-        # Now delete the instance from the database
+    @property
+    def full_url(self):
+        """Returnează URL complet pentru frontend"""
+        from django.conf import settings
+        request_domain = "https://zoom-vintageclassics.com"
+        return f"{request_domain}{settings.MEDIA_URL}{self.path}"
+
+    def delete(self, *args, **kwargs):
+        if self.path:
+            self.path.delete(save=False)
         super().delete(*args, **kwargs)
 
 class Inquiry(models.Model):
