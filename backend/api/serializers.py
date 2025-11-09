@@ -82,11 +82,17 @@ class SafetyFeatureSerializer(serializers.ModelSerializer):
 
 #Listing - Serializers
 class CarListingImageSerializer(serializers.ModelSerializer):
-    full_url = serializers.ReadOnlyField()
+    full_url = serializers.SerializerMethodField()
 
     class Meta:
         model = ListingImage
         fields = ['id', 'path', 'full_url']
+
+    def get_full_url(self, obj):
+        request = self.context.get('request')
+        if request:
+            return request.build_absolute_uri(obj.path.url)
+        return obj.path.url
 
 class CarsListingSerializer(serializers.ModelSerializer):
     make = MakeSerializer()
